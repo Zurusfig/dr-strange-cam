@@ -72,6 +72,7 @@ export class GestureDetector {
       heldMs: this.comboHeldMs,
       pathShape: this.pathTracker.lastShape,
       circleProgress: this.pathTracker.circleProgress,
+      circleCenter: this.pathTracker.circleCenter,
       triggeredSpell: this.triggeredSpell,
       leftPose: leftHand?.pose ?? 'none',
       rightPose: rightHand?.pose ?? 'none',

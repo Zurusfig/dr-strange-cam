@@ -118,7 +118,8 @@ export class DebugOverlay {
     document.getElementById('dbg-combo-held').textContent = state.heldMs ?? 0;
     document.getElementById('dbg-path').textContent = state.pathShape ?? 'none';
     document.getElementById('dbg-circle').textContent = `${state.circleProgress ?? 0}%`;
-    document.getElementById('dbg-spells').textContent = state.triggeredSpell ?? '—';
+    const spells = state.activeSpells?.length ? state.activeSpells.join(', ') : '—';
+    document.getElementById('dbg-spells').textContent = spells;
     document.getElementById('dbg-fps').textContent = this._fps;
   }
 
